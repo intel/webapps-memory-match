@@ -1,0 +1,14 @@
+
+[Desktop Entry]
+Version=1.0
+Name=Memory Match
+Comment=A HTML5-based Card matching game
+GenericName=Memory Match
+Exec=chromium-browser --enable-plugins --enable-extensions --enable-user-scripts --enable-printing --enable-sync --use-gl=egl --ignore-gpu-blacklist --auto-ssl-client-auth %U --app-id=djfbielnigpphgljmaciejpbbdcmfikm --load-extension=/usr/share/memory-match/ --no-first-run
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=memory-match
+Categories=Game;
+StartupWMClass=Chromium
+StartupNotify=true

@@ -1,0 +1,126 @@
+/*
+ * Copyright (c) 2012, Intel Corporation.
+ *
+ * This program is licensed under the terms and conditions of the 
+ * Apache License, version 2.0.  The full text of the Apache License is at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+.helpdialog {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-family: Sans;
+    visibility: hidden;
+}
+
+.helpdialog.shown {
+    visibility: visible;
+    -webkit-transition: background-color 0.5s;
+    background-color: rgba(0,0,0,.33);
+    z-index: 99;
+}
+
+.helpdialog .inner {
+    position: absolute;
+    top: 17%;
+    left : 21%;
+    height: 60%;
+    width: 58%;
+    border: 20px solid #12649e;
+    background-color: #1a3542;
+    padding: 10px;
+    opacity: 0;
+}
+
+.helpdialog.shown .inner {
+    -webkit-transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.helpdialog .inner .contents {
+    font-family: Arial;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: default;
+}
+
+.helpdialog .inner .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -10%;
+    left: 98%;
+    font-family: Sans;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    border: solid 10px #12649e;
+    background-color: #12649e;
+    -webkit-border-radius: 60px;
+    line-height: 24px;
+    cursor: pointer;
+    color: #dddddd;
+}
+
+.helplaunch {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 545px;
+    left: 950px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    -webkit-border-radius: 40px;
+    font-family: Arial;
+    font-size: 30px;
+}
+
+#lvl1_help {
+    border: solid 4px #f3d174;
+    color: #f3d174;
+}
+
+#lvl1_help:hover {
+    border: solid 4px #ffffff;
+    color: #ffffff;
+}
+
+#lvl2_help {
+    border: solid 4px #ffffff;
+    color: #ffffff;
+}
+
+#lvl2_help:hover {
+    border: solid 4px #f3d174;
+    color: #f3d174;
+}
+
+#lvl3_help {
+    border: solid 4px #1b97ed;
+    color: #1b97ed;
+}
+
+#lvl3_help:hover {
+    border: solid 4px #f3d174;
+    color: #f3d174;
+}
+
+#main_help {
+    border: solid 4px #ffffff;
+    color: #ffffff;
+    top: 545px;
+    left: 30px;
+}
+
+#main_help:hover {
+    border: solid 4px #dddddd;
+    color: #dddddd;
+}
+
