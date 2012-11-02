@@ -1,7 +1,7 @@
 
 Memory Match
 
-Author: Todd Brandt <todd.e.brandt@intel.com>
+Author/Owner: Todd Brandt <todd.e.brandt@intel.com>
    
 Technical Details: This application is written using HTML5/css3/jquery javascript 
 library and is distributed under Apache2.0 license.
