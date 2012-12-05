@@ -4,4 +4,5 @@
     <content src="index.html"/>
 <name>memory-match</name>
 <tizen:application id="cfKr0dUVnT" required_version="1.0"/>
+<tizen:setting screen-orientation="landscape" contextmenu="enable"/>
 </widget>
