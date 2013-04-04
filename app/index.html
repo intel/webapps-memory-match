@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <!--
  * Copyright (c) 2012, Intel Corporation.
  *
@@ -8,24 +8,22 @@
  *
 -->
 <html>
-<head>
-    <meta id="viewport_meta" name="viewport" content="" />
-    <script type="text/javascript">
-        var viewport_meta = document.getElementById('viewport_meta');
-        var w = (screen.orientation.indexOf("portrait") == 0)?screen.availWidth:screen.availHeight;
-        viewport_meta.setAttribute('content','width='+w+', user-scalable=no');
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <link rel="stylesheet" href="css/license.css"></link>
+    <link rel="stylesheet" href="css/main.css"></link>
+    <link rel="stylesheet" href="css/help.css"></link>
+    <script>
+    var sw = screen.width,
+        vw = document.documentElement.clientWidth,
+        scale = sw / sw;
+    var content = 'width=' + sw + ', initial-scale=' + scale +
+                  ', maximum-scale=' + scale + ', minimum-scale=' + scale;
+    document.querySelector('[name=viewport]').setAttribute('content', content);
     </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Memory Cards</title>
-    <link rel="stylesheet" type="text/css" href="css/license.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/main.css"></link>
-    <link rel="stylesheet" type="text/css" href="css/help.css"></link>
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/help.js"></script>
-    <script src="js/license.js"></script>
-    <script src="js/main.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main_page" class="game_page">
         <div id="main_bg"></div>
         <div id="main_title"></div>
@@ -40,11 +38,11 @@
            <div id="help_close" class="close"> x </div>
            <div id="help_contents" class="contents">
              Can you find all the matching pictures?<br><br>
-             First, choose a level. The higher the level, the more picture cards 
+             First, choose a level. The higher the level, the more picture cards
              you’ll get.<br><br>
-             Then click a face-down card to peek at it. Click another to see if 
-             you’ve found a match. If not, they’ll flip back over and you can try 
-             again. If they do match, they’ll remain face up, and you’re getting 
+             Then click a face-down card to peek at it. Click another to see if
+             you’ve found a match. If not, they’ll flip back over and you can try
+             again. If they do match, they’ll remain face up, and you’re getting
              closer to winning! If you get stuck, click Hint to uncover a match.
              <br><br>
              When you finish a game, you can click:<br>
@@ -107,7 +105,6 @@
         <div id="lvl2_drop1"></div>
         <div id="lvl2_drop2"></div>
         <div id="lvl2_drop3"></div>
-
         <div id="lvl2_quit" class="quit">&nbsp;&nbsp;&nbsp;Quit</div>
         <div id="lvl2_matches" class="matches">Matches 0/6</div>
         <div id="lvl2_hint" class="hint">Hint</div>
@@ -168,13 +165,6 @@
         </div>
     </div>
 
-    <audio class="lvl1_bg_sound" preload="auto"><source src="audio/Nightsky.wav" type="audio/wav" /></audio>
-    <audio class="lvl2_bg_sound" preload="auto"><source src="audio/Ocean.wav" type="audio/wav" /></audio>
-    <audio class="lvl3_bg_sound" preload="auto"><source src="audio/Kitchen.wav" type="audio/wav" /></audio>
-    <audio class="flip_sound" preload="auto"><source src="audio/FlipCard.wav" type="audio/wav" /></audio>
-    <audio class="match_sound" preload="auto"><source src="audio/GetMatch.wav" type="audio/wav" /></audio>
-    <audio class="mismatch_sound" preload="auto"><source src="audio/WrongLose.wav" type="audio/wav" /></audio>
-    <audio class="click_sound" preload="auto"><source src="audio/NavClick.wav" type="audio/wav" /></audio>
-    <audio class="win_sound" preload="auto"><source src="audio/WinLevel.wav" type="audio/wav" /></audio>
+    <script src="lib/requirejs/require.js" data-main="js/require-config"></script>
 </body>
 </html>
