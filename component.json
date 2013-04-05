@@ -12,6 +12,6 @@
   "dependencies": {
     "almond": "~0.2.5",
     "requirejs-domready": "~2.0.1",
-    "jquery": "~1.9.1"
+    "appframework": "https://github.com/01org/appframework.git"
   }
 }

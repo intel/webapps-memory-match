@@ -1,10 +1,14 @@
-define(['jquery'], function ($) {
-  var dfd = $.Deferred();
+define(['jqmobi'], function ($) {
+  var init = function (doneCb) {
+    $.ajax({
+      url: './pages.html',
 
-  $.ajax('./pages.html').then(function (result) {
-    $('body').append(result);
-    setTimeout(dfd.resolve, 0);
-  });
+      success: function (result) {
+        $('body').append(result);
+        setTimeout(doneCb, 0);
+      }
+    });
+  };
 
-  return dfd;
+  return init;
 });

@@ -1,7 +1,7 @@
 require(
 ['help', 'license', 'ui', 'pages'],
 function (help_init, license_init, ui_init, pagesLoader) {
-  pagesLoader.done(function () {
+  pagesLoader(function () {
     ui_init();
 
     license_init("license", "main_page");

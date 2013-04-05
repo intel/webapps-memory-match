@@ -5,10 +5,13 @@ require.config({
 
   paths: {
     'domReady': '../lib/requirejs-domready/domReady',
-    'jquery': '../lib/jquery/jquery'
+    'jqmobi': '../lib/appframework/jq.mobi'
   },
 
   shim: {
+    'jqmobi': {
+      exports: '$'
+    }
   }
 });
 

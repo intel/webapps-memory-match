@@ -1,6 +1,6 @@
 // links the Game object to the UI and directly
 // sets up event handlers on the DOM
-define(['game', 'jquery', 'domReady!'], function (Game, $) {
+define(['game', 'jqmobi', 'domReady!'], function (Game, $) {
   var ui_init = function () {
     if (window.chrome && window.chrome.i18n) {
       $("#lvl1_quit").html("&nbsp;&nbsp;&nbsp;"+chrome.i18n.getMessage("quit"));
@@ -17,7 +17,7 @@ define(['game', 'jquery', 'domReady!'], function (Game, $) {
 
     /* if a mouseup happens reset the buttons, this is to maintain */
     /* the original page state if a button is only half clicked */
-    $("body").mouseup(function() {
+    $("body").on('mouseup', function() {
       $('#main_lvl1btn').removeClass("main_lvl1btn_on");
       $('#main_lvl1btn').addClass("main_lvl1btn_off");
       $('#main_lvl2btn').removeClass("main_lvl2btn_on");
@@ -26,7 +26,7 @@ define(['game', 'jquery', 'domReady!'], function (Game, $) {
       $('#main_lvl3btn').addClass("main_lvl3btn_off");
     });
 
-    $('#win_dlg_page').mouseup(function() {
+    $('#win_dlg_page').on('mouseup', function() {
       $('#win_btn1').removeClass("win_btn1_on");
       $('#win_btn1').addClass("win_btn1_off");
       $('#win_btn2').removeClass("win_btn2_on");
@@ -69,18 +69,9 @@ define(['game', 'jquery', 'domReady!'], function (Game, $) {
       var id = self.attr('id');
 
       if (!Game.ignore && !($(this).hasClass('flip'))) {
-        Game.play_flip();
-
         /* start the flip animation */
         self.addClass('flip');
-
-        /* ignore clicks during flip */
-        Game.input_off();
-
-        /* set the function to be called after the animation has done */
-        window.setTimeout(function () {
-          Game.card_flipped(id);
-        }, Game.fliptime);
+        Game.card_flipped(id);
       }
     });
 
@@ -101,7 +92,7 @@ define(['game', 'jquery', 'domReady!'], function (Game, $) {
 
       $("#win_dlg_page").hide();
       $("#lvl" + Game.win_level + "_page").hide();
-      $("#lvl" + next_level + "_page").fadeIn("fast");
+      $("#lvl" + next_level + "_page").show();
 
       Game.start_game(next_level);
     });
@@ -109,17 +100,11 @@ define(['game', 'jquery', 'domReady!'], function (Game, $) {
     $("#win_btn3").click(Game.quit);
 
     window.onblur = function() {
-      if (Game.infocus) {
-        Game.infocus = false;
-        Game.pause_level_sound();
-      }
+      Game.unfocus();
     };
 
     window.onfocus = function() {
-      if (!Game.infocus) {
-        Game.infocus = true;
-        Game.play_level_sound();
-      }
+      Game.focus();
     };
   };
 

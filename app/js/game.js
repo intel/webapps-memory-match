@@ -7,7 +7,7 @@
  *
  */
 
-define(['jquery', 'gamesound'], function ($, GameSound) {
+define(['jqmobi', 'sounds'], function ($, Sounds) {
     var Game = {};
 
     Game.infocus = true;
@@ -17,12 +17,6 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
 
     var matchcard = undefined;
     var game_level = -1;
-
-    var lvl_bg_sound = {
-      1: new GameSound('audio/Nightsky.wav'),
-      2: new GameSound('audio/Ocean.wav'),
-      3: new GameSound('audio/Kitchen.wav')
-    };
 
     var gamedata = {
       1: {
@@ -35,20 +29,6 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
         cardcount : 16
       }
     };
-
-    var flip_sound = new GameSound("audio/FlipCard.wav");
-    var match_sound = new GameSound("audio/GetMatch.wav");
-    var mismatch_sound = new GameSound("audio/WrongLose.wav");
-    var click_sound = new GameSound("audio/NavClick.wav");
-    var win_sound = new GameSound("audio/WinLevel.wav");
-
-    function stop_bg_sounds() {
-      for (var i = 1; i <= 3; i++) {
-        lvl_bg_sound[i].pause();
-        if (lvl_bg_sound[i].currentTime > 0)
-          lvl_bg_sound[i].currentTime = 0;
-      }
-    }
 
     function input_on() {
       ignore = false;
@@ -84,7 +64,7 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
                 $("#win_btn2").text("BACK TO START");
         }
 
-        win_sound.play();
+        Sounds.win();
 
         $("#win_dlg_page").show();
     }
@@ -112,46 +92,54 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
     }
 
     function card_flipped(newcard) {
-        var lvl = parseInt(newcard.substring(3, 4));
+        Sounds.flip();
 
-        if (matchcard != undefined)
-        {
-            var newclass = $("#"+newcard+" .front").attr("class");
-            var matchclass = $("#"+matchcard+" .front").attr("class");
+        /* ignore clicks during flip */
+        Game.input_off();
 
-            if(newclass == matchclass)
-            {
-                /* good match */
-                if(update_matches(lvl))
-                {
-                    win_dlg(lvl);
-                }
-                else
-                {
-                    match_sound.play();
-                    input_on();
-                }
-            }
-            else
-            {
-                /* bad match */
-                mismatch_sound.play();
-                $("#"+newcard).removeClass('flip');
-                $("#"+matchcard).removeClass('flip');
+        /* set the function to be called after the animation has done */
+        window.setTimeout(function () {
+          var lvl = parseInt(newcard.substring(3, 4));
 
-                /* keep ignoring input til the cards are flipped back */
-                window.setTimeout(Game.input_on, Game.fliptime);
-            }
+          if (matchcard != undefined)
+          {
+              var newclass = $("#"+newcard+" .front").attr("class");
+              var matchclass = $("#"+matchcard+" .front").attr("class");
 
-            /* reset the match card */
-            matchcard = undefined;
-        }
-        else
-        {
-            /* first card in match attempt, set it and wait */
-            matchcard = newcard;
-            input_on();
-        }
+              if(newclass == matchclass)
+              {
+                  /* good match */
+                  if(update_matches(lvl))
+                  {
+                      win_dlg(lvl);
+                  }
+                  else
+                  {
+                      Sounds.match();
+                      input_on();
+                  }
+              }
+              else
+              {
+                  /* bad match */
+                  Sounds.mismatch();
+                  $("#"+newcard).removeClass('flip');
+                  $("#"+matchcard).removeClass('flip');
+
+                  /* keep ignoring input til the cards are flipped back */
+                  window.setTimeout(Game.input_on, Game.fliptime);
+              }
+
+              /* reset the match card */
+              matchcard = undefined;
+          }
+          else
+          {
+              /* first card in match attempt, set it and wait */
+              matchcard = newcard;
+              input_on();
+          }
+        }, Game.fliptime);
     }
 
     function generate_hint(lvl) {
@@ -167,19 +155,19 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
                     input_off();
 
                     /* flip the card's match for the poor child */
-                    flip_sound.play();
+                    Sounds.flip();
                     $("#"+newcard).addClass('flip');
 
                     if(update_matches(lvl))
                     {
-                        match_sound.play();
+                        Sounds.match()
                         window.setTimeout(function () {
                           Game.win_dlg(lvl);
                         }, Game.fliptime);
                     }
                     else
                     {
-                        match_sound.play();
+                        Sounds.match()
                         window.setTimeout(Game.input_on, Game.fliptime);
                     }
                 }
@@ -211,20 +199,20 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
                     input_off();
 
                     /* flip two cards for the poor child */
-                    flip_sound.play();
+                    Sounds.flip();
                     $("#"+tgtcard).addClass('flip');
                     $("#"+newcard).addClass('flip');
 
                     if(update_matches(lvl))
                     {
-                        match_sound.play();
+                        Sounds.match()
                         window.setTimeout(function () {
                           Game.win_dlg(lvl);
                         }, Game.fliptime);
                     }
                     else
                     {
-                        match_sound.play();
+                        Sounds.match()
                         window.setTimeout(Game.input_on, Game.fliptime);
                     }
                 }
@@ -232,18 +220,10 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
         }
     }
 
-    function play_click() {
-      click_sound.play();
-    }
-
-    function play_flip() {
-      flip_sound.play();
-    };
-
     function start_game(lvl) {
-        play_click();
-        stop_bg_sounds();
-        play_level_sound(lvl);
+        Sounds.click();
+        Sounds.stop_bg_sounds();
+        Sounds.play_level_sound(lvl);
 
         game_level = lvl;
 
@@ -287,23 +267,9 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
       game_level = level;
     };
 
-    var pause_level_sound = function (level) {
-      level = (typeof level === 'undefined' ? game_level : level);
-
-      if (level >= 0)
-        lvl_bg_sound[level].pause();
-    };
-
-    var play_level_sound = function (level) {
-      level = (typeof level === 'undefined' ? game_level : level);
-
-      if (level >= 1)
-        lvl_bg_sound[level].play();
-    };
-
     var quit = function () {
-      stop_bg_sounds();
-      play_click();
+      Sounds.stop_bg_sounds();
+      Sounds.click();
       $("#win_dlg_page").hide();
       $("#lvl1_page").hide();
       $("#lvl2_page").hide();
@@ -317,14 +283,23 @@ define(['jquery', 'gamesound'], function ($, GameSound) {
     Game.input_off = input_off;
     Game.win_dlg = win_dlg;
     Game.start_game = start_game;
-    Game.stop_bg_sounds = stop_bg_sounds;
     Game.set_level = set_level;
-    Game.pause_level_sound = pause_level_sound;
-    Game.play_level_sound = play_level_sound;
     Game.generate_hint = generate_hint;
-    Game.play_click = play_click;
-    Game.play_flip = play_flip;
     Game.quit = quit;
+
+    Game.unfocus = function () {
+      if (Game.infocus) {
+        Game.infocus = false;
+        Sounds.pause_level_sound(Game.win_level);
+      }
+    };
+
+    Game.focus = function () {
+      if (!Game.infocus) {
+        Game.infocus = true;
+        Sounds.play_level_sound(Game.win_level);
+      }
+    };
 
     return Game;
 });
