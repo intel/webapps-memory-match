@@ -114,8 +114,8 @@ module.exports = function (grunt) {
         options: {
           removeComments: true,
           collapseWhitespace: true,
-          removeCommentsFromCDATA: true,
-          removeCDATASectionsFromCDATA: true,
+          removeCommentsFromCDATA: false,
+          removeCDATASectionsFromCDATA: false,
           removeEmptyAttributes: true
         }
       }
