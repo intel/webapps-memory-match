@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     content = content.replace(/<script.*?src.*?.+?><\/script>/g, '');
 
     // add single <script> just before the closing </body>
-    var html = '<script src="' + script + '"></script></body>';
+    var html = '<script async="async" src="' + script + '"></script></body>';
     content = content.replace(/<\/body>/, html);
 
     // add a single <link> just above the closing </head>
