@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="css/main.css"></link>
     <link rel="stylesheet" href="css/help.css"></link>
     <script>
-    var sw = screen.width,
-        vw = document.documentElement.clientWidth,
-        scale = sw / sw;
-    var content = 'width=' + sw + ', initial-scale=' + scale +
-                  ', maximum-scale=' + scale + ', minimum-scale=' + scale;
-    document.querySelector('[name=viewport]').setAttribute('content', content);
+    (function () {
+      var sw = screen.width,
+          vw = document.documentElement.clientWidth,
+          scale = sw / sw;
+      var content = 'width=' + sw + ', initial-scale=' + scale +
+                    ', maximum-scale=' + scale + ', minimum-scale=' + scale;
+      document.querySelector('[name=viewport]').setAttribute('content', content);
+    })();
     </script>
   </head>
   <body>
