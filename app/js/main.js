@@ -1,6 +1,8 @@
 require(
-['help', 'license', 'ui', 'pages'],
-function (help_init, license_init, ui_init, pagesLoader) {
+['sounds', 'help', 'license', 'ui', 'pages'],
+function (Sounds, help_init, license_init, ui_init, pagesLoader) {
+  // when all HTML is loaded, augment the DOM with event
+  // handlers and load text files
   pagesLoader(function () {
     ui_init();
 
@@ -10,5 +12,8 @@ function (help_init, license_init, ui_init, pagesLoader) {
     help_init("lvl1_help", "help_");
     help_init("lvl2_help", "help_");
     help_init("lvl3_help", "help_");
+
+    // pre-load all sounds used in the game
+    Sounds.loadAll();
   });
 });

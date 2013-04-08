@@ -1,57 +1,96 @@
 define(['gamesound'], function (GameSound) {
   var Sounds = {};
 
-  var lvl_bg_sound = {
-    1: new GameSound('audio/Nightsky.wav'),
-    2: new GameSound('audio/Ocean.wav'),
-    3: new GameSound('audio/Kitchen.wav')
+  var audioFilePaths = {
+    lvl_1: 'audio/Nightsky.wav',
+    lvl_2: 'audio/Ocean.wav',
+    lvl_3: 'audio/Kitchen.wav',
+    flip: 'audio/FlipCard.wav',
+    match: 'audio/GetMatch.wav',
+    mismatch: 'audio/WrongLose.wav',
+    click: 'audio/NavClick.wav',
+    win: 'audio/WinLevel.wav'
   };
 
-  var flip_sound = new GameSound("audio/FlipCard.wav");
-  var match_sound = new GameSound("audio/GetMatch.wav");
-  var mismatch_sound = new GameSound("audio/WrongLose.wav");
-  var click_sound = new GameSound("audio/NavClick.wav");
-  var win_sound = new GameSound("audio/WinLevel.wav");
+  var audioFiles = {};
+
+  var loadSound = function (key, done) {
+    var path = audioFilePaths[key];
+
+    audioFiles[key] = GameSound.create(path, function (audio) {
+      if (done) {
+        done(audio);
+      }
+    });
+  };
+
+  var playSound = function (key) {
+    if (!audioFiles[key]) {
+      loadSound(key, function (audio) {
+        audio.play();
+      });
+    }
+    else {
+      audioFiles[key].play();
+    }
+  };
+
+  var pauseSound = function (key) {
+    if (audioFiles[key]) {
+      audioFiles[key].pause();
+    }
+  };
+
+  var stopSound = function (key) {
+    if (audioFiles[key]) {
+      audioFiles[key].stop();
+    }
+  };
 
   Sounds.click = function () {
-    click_sound.play();
+    playSound('click');
   };
 
   Sounds.flip = function () {
-    flip_sound.play();
+    playSound('flip');
   };
 
   Sounds.win = function () {
-    win_sound.play()
+    playSound('win');
   };
 
   Sounds.match = function () {
-    match_sound.play();
+    playSound('match');
   };
 
   Sounds.mismatch = function () {
-    mismatch_sound.play();
+    playSound('mismatch');
   };
 
   Sounds.pause_level_sound = function (level) {
     level = (typeof level === 'undefined' ? game_level : level);
 
     if (level > 0)
-      lvl_bg_sound[level].pause();
+      pauseSound('lvl_' + level);
   };
 
   Sounds.play_level_sound = function (level) {
     level = (typeof level === 'undefined' ? game_level : level);
 
     if (level > 0)
-      lvl_bg_sound[level].play();
+      playSound('lvl_' + level);
   };
 
   Sounds.stop_bg_sounds = function () {
     for (var i = 1; i <= 3; i++) {
-      lvl_bg_sound[i].pause();
-      if (lvl_bg_sound[i].currentTime > 0)
-        lvl_bg_sound[i].currentTime = 0;
+      stopSound('lvl_' + i);
+    }
+  };
+
+  // lazy load all sounds
+  Sounds.loadAll = function () {
+    for (var k in audioFilePaths) {
+      loadSound(k);
     }
   };
 
