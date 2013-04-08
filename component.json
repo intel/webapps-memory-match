@@ -1,0 +1,17 @@
+{
+  "name": "Memory Match",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "requirejs": "~2.1.5"
+  },
+  "dependencies": {
+    "almond": "~0.2.5",
+    "requirejs-domready": "~2.0.1",
+    "appframework": "https://github.com/01org/appframework.git"
+  }
+}

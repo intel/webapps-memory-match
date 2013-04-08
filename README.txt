@@ -2,14 +2,14 @@
 Memory Match
 
 Author/Owner: Todd Brandt <todd.e.brandt@intel.com>
-   
-Technical Details: This application is written using HTML5/css3/jquery javascript 
+
+Technical Details: This application is written using HTML5/css3/jquery javascript
 library and is distributed under Apache2.0 license.
 
 IMAGES
 -----------------------------------------------------------------------------
 
-all images in the img folder are created by Intel Corp.
+all images in the app/img folder are created by Intel Corp.
 they are licensed under the Creative Commons Attribution 3.0 license
 http://creativecommons.org/licenses/by/3.0/us/
 
@@ -20,7 +20,7 @@ These files are a part of a group from the same source
 AmaticSC-Bold.ttf
 AmaticSC-Regular.ttf
 Origin: http://www.google.com/webfonts
-License: fonts/OFL.txt
+License: OFL.txt
 
 SOUNDS
 -------------------------------------------------------------------------------------------------------------------------------------------

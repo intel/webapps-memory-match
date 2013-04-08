@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2012, Intel Corporation.
+ *
+ * This program is licensed under the terms and conditions of the
+ * Apache License, version 2.0.  The full text of the Apache License is at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <link rel="stylesheet" href="css/license.css"></link>
+    <link rel="stylesheet" href="css/main.css"></link>
+    <link rel="stylesheet" href="css/help.css"></link>
+    <script>
+    (function () {
+      var sw = screen.width,
+          vw = document.documentElement.clientWidth,
+          scale = sw / sw;
+      var content = 'width=' + sw + ', initial-scale=' + scale +
+                    ', maximum-scale=' + scale + ', minimum-scale=' + scale;
+      document.querySelector('[name=viewport]').setAttribute('content', content);
+    })();
+    </script>
+  </head>
+  <body>
+    <div id="main_page" class="game_page">
+        <div id="main_bg"></div>
+        <div id="main_title"></div>
+        <div id="licensebtnl" style="top: 560px; left: 620px;"> i </div>
+        <div id="main_lvl1btn" class="main_btn_text main_lvl1btn_off" onmousedown="this.className='main_btn_text main_lvl1btn_on'">Level 1</div>
+        <div id="main_lvl2btn" class="main_btn_text main_lvl2btn_off" onmousedown="this.className='main_btn_text main_lvl2btn_on'">Level 2</div>
+        <div id="main_lvl3btn" class="main_btn_text main_lvl3btn_off" onmousedown="this.className='main_btn_text main_lvl3btn_on'">Level 3</div>
+        <div id="main_help" class="helplaunch"> ? </div>
+    </div>
+
+  <script src="lib/requirejs/require.js" data-main="js/require-config"></script>
+</body>
+</html>
