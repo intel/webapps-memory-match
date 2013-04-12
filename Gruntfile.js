@@ -86,7 +86,7 @@ module.exports = function (grunt) {
         files: [
           { expand: true, cwd: '.', src: ['app/audio/**'], dest: 'build/' },
           { expand: true, cwd: '.', src: ['app/font/**'], dest: 'build/' },
-          { expand: true, cwd: '.', src: ['README.txt'], dest: 'build/app/' },
+          { expand: true, cwd: '.', src: ['README.txt'], dest: 'build/app/' }
         ]
       },
       wgt: {
@@ -102,6 +102,30 @@ module.exports = function (grunt) {
           { expand: true, cwd: 'app/_locales', src: ['**'], dest: 'build/crx/_locales' },
           { expand: true, cwd: '.', src: ['manifest.json'], dest: 'build/crx/' },
           { expand: true, cwd: '.', src: ['memory-match-icon*.png'], dest: 'build/crx/' }
+        ]
+      },
+      sdk: {
+        files: [
+          { expand: true, cwd: 'build/app/', src: ['**'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'app', src: ['js/**'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'app', src: ['css/**'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'app', src: ['*.html'], dest: 'build/sdk/' },
+          {
+            src: 'app/lib/appframework/jq.mobi.js',
+            dest: 'build/sdk/lib/appframework/jq.mobi.js'
+          },
+          {
+            src: 'app/lib/requirejs/require.js',
+            dest: 'build/sdk/lib/requirejs/require.js'
+          },
+          {
+            src: 'app/lib/requirejs-domready/domReady.js',
+            dest: 'build/sdk/lib/requirejs-domready/domReady.js'
+          },
+          { expand: true, cwd: '.', src: ['config.xml'], dest: 'build/sdk/' },
+          { expand: true, cwd: '.', src: ['memory-match-icon.png'], dest: 'build/sdk/' },
+          { expand: true, cwd: '.', src: ['LICENSE'], dest: 'build/sdk/' },
+          { expand: true, cwd: '.', src: ['OFL.txt'], dest: 'build/sdk/' }
         ]
       }
     },
@@ -149,6 +173,15 @@ module.exports = function (grunt) {
         version: '<%= packageInfo.version %>',
         files: 'build/wgt/**',
         stripPrefix: 'build/wgt/',
+        outDir: 'build',
+        suffix: '.wgt',
+        addGitCommitId: false
+      },
+      sdk: {
+        appName: '<%= packageInfo.name %>',
+        version: '<%= packageInfo.version %>',
+        files: 'build/sdk/**',
+        stripPrefix: 'build/sdk/',
         outDir: 'build',
         suffix: '.wgt',
         addGitCommitId: false
@@ -223,19 +256,18 @@ module.exports = function (grunt) {
     'condense'
   ]);
 
+  grunt.registerTask('sdk', [
+    'clean',
+    'copy:common',
+    'imagemin:dist',
+    'copy:sdk',
+    'package:sdk'
+  ]);
+
   grunt.registerTask('wgt', ['dist', 'copy:wgt', 'package:wgt']);
   grunt.registerTask('crx', ['dist', 'copy:crx']);
 
   grunt.registerTask('install', [
-    'wgt',
-    'sdb:prepare',
-    'sdb:pushwgt',
-    'sdb:install',
-    'sdb:start'
-  ]);
-
-  grunt.registerTask('reinstall', [
-    'wgt',
     'sdb:prepare',
     'sdb:pushwgt',
     'sdb:stop',
@@ -243,6 +275,9 @@ module.exports = function (grunt) {
     'sdb:install',
     'sdb:start'
   ]);
+
+  grunt.registerTask('wgt-install', ['wgt', 'install']);
+  grunt.registerTask('sdk-install', ['sdk', 'install']);
 
   grunt.registerTask('restart', ['sdb:stop', 'sdb:start']);
 
