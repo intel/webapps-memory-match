@@ -80,7 +80,7 @@ define(['game', 'jqmobi', 'domReady!'], function (Game, $) {
       $("#win_dlg_page").hide();
       $(".card").removeClass('flip');
       window.setTimeout(function () {
-        Game.start_game(Game.win_level - 1);
+        Game.start_game(Game.win_level);
       }, Game.fliptime);
     });
 
