@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2012, Intel Corporation.
+ *
+ * This program is licensed under the terms and conditions of the
+ * Apache License, version 2.0.  The full text of the Apache License is at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
 define(function () {
   // done(GameSound) is a callback invoked with the created GameSound object
   // when the corresponding Audio object it wraps is playable

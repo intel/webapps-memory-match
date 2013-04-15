@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2012, Intel Corporation.
+ *
+ * This program is licensed under the terms and conditions of the
+ * Apache License, version 2.0.  The full text of the Apache License is at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
 require(
 ['sounds', 'help', 'license', 'ui', 'pages'],
 function (Sounds, help_init, license_init, ui_init, pagesLoader) {
