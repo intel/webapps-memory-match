@@ -57,8 +57,8 @@ WinLevel.wav
 LIBRARIES
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-jQuery JavaScript Library v1.7.2
-Copyright 2011, John Resig
-Dual licensed under the MIT or GPL Version 2 licenses.
-http://jquery.org/license
+Intel App Framework (aka jqMobi)
+Copyright 2011, Intel Corporation Ltd.
+MIT X11 licence
+https://github.com/01org/appframework/blob/master/license.txt
 
