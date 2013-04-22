@@ -318,6 +318,8 @@ module.exports = function (grunt) {
    * config.sdbCmd: the sdb binary path (default='sdb')
    * done: function with signature done(err), where err is set to
    * a non-null value if an error occurs
+   * config.stopOnFailure: if true and uninstall fails, stop grunt
+   * (default: false)
    */
   var uninstall = function (config, done) {
     var configXml = config.config;
@@ -326,7 +328,7 @@ module.exports = function (grunt) {
     var stopOnFailure = (config.stopOnFailure === true ? true : false);
 
     getMeta(configXml, function (err, meta) {
-      var id = meta.uri;
+      var id = meta.id;
 
       var cmd = sdbCmd + ' shell "' + remoteScript +
                 ' uninstall ' + id + '"';
