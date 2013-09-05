@@ -14,11 +14,11 @@ require.config({
 
   paths: {
     'domReady': '../lib/requirejs-domready/domReady',
-    'jqmobi': '../lib/appframework/jq.mobi'
+    'appframework': '../lib/appframework/appframework'
   },
 
   shim: {
-    'jqmobi': {
+    'appframework': {
       exports: '$'
     }
   }

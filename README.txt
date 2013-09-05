@@ -3,8 +3,8 @@ Memory Match
 
 Author/Owner: Todd Brandt <todd.e.brandt@intel.com>
 
-Technical Details: This application is written using HTML5/css3/jqMobi javascript
-library and is distributed under Apache2.0 license.
+Technical Details: This application is written using HTML5/css3/Intel
+Appframework javascript library and is distributed under Apache2.0 license.
 
 IMAGES
 -----------------------------------------------------------------------------
@@ -57,7 +57,7 @@ WinLevel.wav
 LIBRARIES
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-Intel App Framework (aka jqMobi)
+Intel App Framework (previously jqMobi)
 Copyright 2011, Intel Corporation Ltd.
 MIT X11 licence
 https://github.com/01org/appframework/blob/master/license.txt

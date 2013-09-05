@@ -7,7 +7,7 @@
  *
  */
 
-define(['jqmobi', 'sounds'], function ($, Sounds) {
+define(['appframework', 'sounds'], function ($, Sounds) {
     var Game = {};
 
     Game.infocus = true;

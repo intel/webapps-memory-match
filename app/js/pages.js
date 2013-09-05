@@ -7,7 +7,7 @@
  *
  */
 
-define(['jqmobi'], function ($) {
+define(['appframework'], function ($) {
   var init = function (doneCb) {
     $.ajax({
       url: './pages.html',

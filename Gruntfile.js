@@ -111,8 +111,8 @@ module.exports = function (grunt) {
           { expand: true, cwd: 'app', src: ['css/**'], dest: 'build/sdk/' },
           { expand: true, cwd: 'app', src: ['*.html'], dest: 'build/sdk/' },
           {
-            src: 'app/lib/appframework/jq.mobi.js',
-            dest: 'build/sdk/lib/appframework/jq.mobi.js'
+            src: 'app/lib/appframework/appframework.js',
+            dest: 'build/sdk/lib/appframework/appframework.js'
           },
           {
             src: 'app/lib/requirejs/require.js',

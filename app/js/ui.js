@@ -9,7 +9,7 @@
 
 // links the Game object to the UI and directly
 // sets up event handlers on the DOM
-define(['game', 'jqmobi', 'domReady!'], function (Game, $) {
+define(['game', 'appframework', 'domReady!'], function (Game, $) {
   var ui_init = function () {
     if (window.chrome && window.chrome.i18n) {
       $("#lvl1_quit").html("&nbsp;&nbsp;&nbsp;"+chrome.i18n.getMessage("quit"));
