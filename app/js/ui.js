@@ -9,7 +9,10 @@
 
 // links the Game object to the UI and directly
 // sets up event handlers on the DOM
-define(['game', 'appframework', 'domReady!'], function (Game, $) {
+define(['game', 'appframework', 'scale', 'domReady!'], function (Game, $, scale) {
+  var container = $("#container");
+  var containerElt = container.get(0);
+
   var ui_init = function () {
     if (window.chrome && window.chrome.i18n) {
       $("#lvl1_quit").html("&nbsp;&nbsp;&nbsp;"+chrome.i18n.getMessage("quit"));
@@ -115,6 +118,12 @@ define(['game', 'appframework', 'domReady!'], function (Game, $) {
     window.onfocus = function() {
       Game.focus();
     };
+
+    // apply mock rotation where window width <= 600px
+    scale(containerElt, 600);
+
+    // show the container
+    container.show();
   };
 
   return ui_init;

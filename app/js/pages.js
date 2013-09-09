@@ -13,7 +13,7 @@ define(['appframework'], function ($) {
       url: './pages.html',
 
       success: function (result) {
-        $('body').append(result);
+        $('#container').append(result);
         setTimeout(doneCb, 0);
       }
     });
