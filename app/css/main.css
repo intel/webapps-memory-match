@@ -17,6 +17,7 @@ body {
 
 #container {
     box-shadow: 5px 5px 20px black;
+    position: absolute;
     width: 1024px;
     height: 600px;
     -webkit-box-align: center;

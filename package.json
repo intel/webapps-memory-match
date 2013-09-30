@@ -1,5 +1,5 @@
 {
-  "name": "webapps-memory-match",
+  "name": "MemoryMatch",
   "version": "1.1.0",
   "description": "Memory match",
   "main": "app/js/main.js",

@@ -3,6 +3,6 @@
     <icon src="icon_128.png"/>
     <content src="index.html"/>
     <name>memory-match</name>
-    <tizen:application id="cfKr0dUVnT.memory-match" package="cfKr0dUVnT" required_version="2.1"/>
+    <tizen:application id="cfKr0dUVnT.memorymatch" package="cfKr0dUVnT" required_version="2.1"/>
     <tizen:setting screen-orientation="landscape" contextmenu="enable"/>
 </widget>
