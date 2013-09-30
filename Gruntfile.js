@@ -93,7 +93,7 @@ module.exports = function (grunt) {
         files: [
           { expand: true, cwd: 'build/app/', src: ['**'], dest: 'build/wgt/' },
           { expand: true, cwd: '.', src: ['config.xml'], dest: 'build/wgt/' },
-          { expand: true, cwd: '.', src: ['memory-match-icon.png'], dest: 'build/wgt/' }
+          { expand: true, cwd: '.', src: ['icon_128.png'], dest: 'build/wgt/' }
         ]
       },
       crx: {
@@ -101,7 +101,7 @@ module.exports = function (grunt) {
           { expand: true, cwd: 'build/app/', src: ['**'], dest: 'build/crx/' },
           { expand: true, cwd: 'app/_locales', src: ['**'], dest: 'build/crx/_locales' },
           { expand: true, cwd: '.', src: ['manifest.json'], dest: 'build/crx/' },
-          { expand: true, cwd: '.', src: ['memory-match-icon*.png'], dest: 'build/crx/' }
+          { expand: true, cwd: '.', src: ['icon*.png'], dest: 'build/crx/' }
         ]
       },
       sdk: {
@@ -123,7 +123,7 @@ module.exports = function (grunt) {
             dest: 'build/sdk/lib/requirejs-domready/domReady.js'
           },
           { expand: true, cwd: '.', src: ['config.xml'], dest: 'build/sdk/' },
-          { expand: true, cwd: '.', src: ['memory-match-icon.png'], dest: 'build/sdk/' },
+          { expand: true, cwd: '.', src: ['icon.png'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['LICENSE'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['OFL.txt'], dest: 'build/sdk/' }
         ]
