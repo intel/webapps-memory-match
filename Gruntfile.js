@@ -107,9 +107,9 @@ module.exports = function (grunt) {
       sdk: {
         files: [
           { expand: true, cwd: 'build/app/', src: ['**'], dest: 'build/sdk/' },
-          { expand: true, cwd: 'app', src: ['js/**'], dest: 'build/sdk/' },
-          { expand: true, cwd: 'app', src: ['css/**'], dest: 'build/sdk/' },
-          { expand: true, cwd: 'app', src: ['*.html'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'app/', src: ['js/**'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'app/', src: ['css/**'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'app/', src: ['*.html'], dest: 'build/sdk/' },
           {
             src: 'app/lib/appframework/appframework.js',
             dest: 'build/sdk/lib/appframework/appframework.js'
