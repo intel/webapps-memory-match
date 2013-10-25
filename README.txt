@@ -1,4 +1,3 @@
-
 Memory Match
 
 Author/Owner: Todd Brandt <todd.e.brandt@intel.com>
@@ -62,3 +61,6 @@ Copyright 2011, Intel Corporation Ltd.
 MIT X11 licence
 https://github.com/01org/appframework/blob/master/license.txt
 
+RequireJS, RequireJS domready plugin, Almond
+New BSD or MIT licensed
+http://requirejs.org/
