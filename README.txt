@@ -5,8 +5,24 @@ Author/Owner: Todd Brandt <todd.e.brandt@intel.com>
 Technical Details: This application is written using HTML5/css3/Intel
 Appframework javascript library and is distributed under Apache2.0 license.
 
--------
+--------
 LICENCES
+
+Links for the licences referred to below:
+
+*   SIL 1.1: http://scripts.sil.org/OFL
+
+*   CC BY 3.0: http://creativecommons.org/licenses/by/3.0/
+
+*   CC BY 3.0 US: http://creativecommons.org/licenses/by/3.0/us/
+
+*   Apache v2.0: http://opensource.org/licenses/Apache-2.0
+
+*   MIT: http://opensource.org/licenses/MIT
+
+*   New BSD: http://opensource.org/licenses/BSD-3-Clause
+
+*   X11: http://directory.fsf.org/wiki/License:X11
 
 Libraries:
 
