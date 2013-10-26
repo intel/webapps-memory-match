@@ -36,7 +36,7 @@ body {
 }
 
 #main_bg {
-    background:url(../img/bg.png) no-repeat;
+    background:url(../images/bg.png) no-repeat;
     width: 100%;
     height: 100%;
     z:1;
@@ -48,7 +48,7 @@ body {
     left: 47px;
     width: 569px;
     height: 137px;
-    background:url(../img/memory-title.png) no-repeat;
+    background:url(../images/memory-title.png) no-repeat;
     display: block;
     z:2;
 }
@@ -71,25 +71,25 @@ body {
 }
 
 .main_lvl1btn_off:hover {
-    background:url(../img/opening-lvl1-rollover.png) no-repeat;
+    background:url(../images/opening-lvl1-rollover.png) no-repeat;
     top: 8px;
     left: 677px;
 }
 
 .main_lvl1btn_off {
-    background:url(../img/opening-lvl1.png) no-repeat;
+    background:url(../images/opening-lvl1.png) no-repeat;
     top: 8px;
     left: 677px;
 }
 
 .main_lvl1btn_on:hover {
-    background:url(../img/opening-lvl1.png) no-repeat;
+    background:url(../images/opening-lvl1.png) no-repeat;
     top: 12px;
     left: 681px;
 }
 
 .main_lvl1btn_on {
-    background:url(../img/opening-lvl1.png) no-repeat;
+    background:url(../images/opening-lvl1.png) no-repeat;
     top: 12px;
     left: 681px;
 }
@@ -102,25 +102,25 @@ body {
 }
 
 .main_lvl2btn_off:hover {
-    background:url(../img/opening-lvl2-rollover.png) no-repeat;
+    background:url(../images/opening-lvl2-rollover.png) no-repeat;
     top: 205px;
     left: 677px;
 }
 
 .main_lvl2btn_off {
-    background:url(../img/opening-lvl2.png) no-repeat;
+    background:url(../images/opening-lvl2.png) no-repeat;
     top: 205px;
     left: 677px;
 }
 
 .main_lvl2btn_on:hover {
-    background:url(../img/opening-lvl2.png) no-repeat;
+    background:url(../images/opening-lvl2.png) no-repeat;
     top: 209px;
     left: 681px;
 }
 
 .main_lvl2btn_on {
-    background:url(../img/opening-lvl2.png) no-repeat;
+    background:url(../images/opening-lvl2.png) no-repeat;
     top: 209px;
     left: 681px;
 }
@@ -133,25 +133,25 @@ body {
 }
 
 .main_lvl3btn_off:hover {
-    background:url(../img/opening-lvl3-rollover.png) no-repeat;
+    background:url(../images/opening-lvl3-rollover.png) no-repeat;
     top: 402px;
     left: 677px;
 }
 
 .main_lvl3btn_off {
-    background:url(../img/opening-lvl3.png) no-repeat;
+    background:url(../images/opening-lvl3.png) no-repeat;
     top: 402px;
     left: 677px;
 }
 
 .main_lvl3btn_on:hover {
-    background:url(../img/opening-lvl3.png) no-repeat;
+    background:url(../images/opening-lvl3.png) no-repeat;
     top: 406px;
     left: 681px;
 }
 
 .main_lvl3btn_on {
-    background:url(../img/opening-lvl3.png) no-repeat;
+    background:url(../images/opening-lvl3.png) no-repeat;
     top: 406px;
     left: 681px;
 }
@@ -230,7 +230,7 @@ body {
     left: 233px;
     height: 216px;
     width: 558px;
-    background:url(../img/window.png) no-repeat;
+    background:url(../images/window.png) no-repeat;
     font-size: 60px;
     font-family: AmaticSC-Bold;
     color: black;
@@ -263,25 +263,25 @@ body {
 }
 
 .win_btn1_off:hover {
-    background:url(../img/btn-purple-rollover.png) no-repeat;
+    background:url(../images/btn-purple-rollover.png) no-repeat;
     top: 120px;
     left: 70px;
 }
 
 .win_btn1_off {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../images/btn-purple.png) no-repeat;
     top: 120px;
     left: 70px;
 }
 
 .win_btn1_on:hover {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../images/btn-purple.png) no-repeat;
     top: 122px;
     left: 72px;
 }
 
 .win_btn1_on {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../images/btn-purple.png) no-repeat;
     top: 122px;
     left: 72px;
 }
@@ -301,25 +301,25 @@ body {
 }
 
 .win_btn2_off:hover {
-    background:url(../img/btn-teal-rollover.png) no-repeat;
+    background:url(../images/btn-teal-rollover.png) no-repeat;
     top: 117px;
     left: 210px;
 }
 
 .win_btn2_off {
-    background:url(../img/btn-teal.png) no-repeat;
+    background:url(../images/btn-teal.png) no-repeat;
     top: 117px;
     left: 210px;
 }
 
 .win_btn2_on:hover {
-    background:url(../img/btn-teal.png) no-repeat;
+    background:url(../images/btn-teal.png) no-repeat;
     top: 119px;
     left: 212px;
 }
 
 .win_btn2_on {
-    background:url(../img/btn-teal.png) no-repeat;
+    background:url(../images/btn-teal.png) no-repeat;
     top: 119px;
     left: 212px;
 }
@@ -339,25 +339,25 @@ body {
 }
 
 .win_btn3_off:hover {
-    background:url(../img/btn-purple-rollover.png) no-repeat;
+    background:url(../images/btn-purple-rollover.png) no-repeat;
     top: 120px;
     left: 370px;
 }
 
 .win_btn3_off {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../images/btn-purple.png) no-repeat;
     top: 120px;
     left: 370px;
 }
 
 .win_btn3_on:hover {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../images/btn-purple.png) no-repeat;
     top: 122px;
     left: 372px;
 }
 
 .win_btn3_on {
-    background:url(../img/btn-purple.png) no-repeat;
+    background:url(../images/btn-purple.png) no-repeat;
     top: 122px;
     left: 372px;
 }
@@ -380,7 +380,7 @@ body {
 /* -------------------------------- lvl1 page ----------------------------- */
 
 #lvl1_bg {
-    background:url(../img/lvl1-bg.png) no-repeat;
+    background:url(../images/lvl1-bg.png) no-repeat;
     width: 100%;
     height: 100%;
     z:1;
@@ -388,7 +388,7 @@ body {
 
 #lvl1_bg_mtn1 {
     position: absolute;
-    background:url(../img/lvl1-mtn-1.png) no-repeat;
+    background:url(../images/lvl1-mtn-1.png) no-repeat;
     top: 88px;
     left: 0px;
     width: 298px;
@@ -397,7 +397,7 @@ body {
 
 #lvl1_bg_mtn2 {
     position: absolute;
-    background:url(../img/lvl1-mtn-2.png) no-repeat;
+    background:url(../images/lvl1-mtn-2.png) no-repeat;
     top: 220px;
     left: 81px;
     width: 313px;
@@ -406,7 +406,7 @@ body {
 
 #lvl1_bg_mtn3 {
     position: absolute;
-    background:url(../img/lvl1-mtn-3.png) no-repeat;
+    background:url(../images/lvl1-mtn-3.png) no-repeat;
     top: 319px;
     left: 869px;
     width: 155px;
@@ -429,7 +429,7 @@ body {
     width: 95px;
     height: 55px;
     display: block;
-    background:url(../img/lvl1-cloud-1.png) no-repeat;
+    background:url(../images/lvl1-cloud-1.png) no-repeat;
 }
 
 .lvl1_cloud2_class {
@@ -438,7 +438,7 @@ body {
     width: 64px;
     height: 44px;
     display: block;
-    background:url(../img/lvl1-cloud-2.png) no-repeat;
+    background:url(../images/lvl1-cloud-2.png) no-repeat;
 }
 
 #lvl1_cloud1_1 { top: 91px; -webkit-animation: lvl1_cloud_float1 70s linear -64s infinite; }
@@ -461,21 +461,21 @@ body {
     width: 121px;
     height: 121px;
     display: block;
-    background:url(../img/lvl1-moon.png) no-repeat;
+    background:url(../images/lvl1-moon.png) no-repeat;
     -webkit-animation: rock_rotate_left 4s ease-in-out infinite;
 }
 
-#lvl1_quit { color: #f3d174; background:url(../img/lvl1-quit-x.png) no-repeat; }
+#lvl1_quit { color: #f3d174; background:url(../images/lvl1-quit-x.png) no-repeat; }
 #lvl1_matches { color: #f3d174; }
 #lvl1_hint { color: #f3d174; }
-#lvl1_hintrays:hover { background:url(../img/lvl1-hint-rays.png) no-repeat; }
+#lvl1_hintrays:hover { background:url(../images/lvl1-hint-rays.png) no-repeat; }
 
 .lvl1_card { width: 160px; height: 162px; }
-.lvl1_card_back { background:url(../img/lvl1-card-back.png) no-repeat; }
-.lvl1_card_type1 { background:url(../img/lvl1-card-fish.png) no-repeat; }
-.lvl1_card_type2 { background:url(../img/lvl1-card-acorn.png) no-repeat; }
-.lvl1_card_type3 { background:url(../img/lvl1-card-teepee.png) no-repeat; }
-.lvl1_card_type4 { background:url(../img/lvl1-card-tree.png) no-repeat; }
+.lvl1_card_back { background:url(../images/lvl1-card-back.png) no-repeat; }
+.lvl1_card_type1 { background:url(../images/lvl1-card-fish.png) no-repeat; }
+.lvl1_card_type2 { background:url(../images/lvl1-card-acorn.png) no-repeat; }
+.lvl1_card_type3 { background:url(../images/lvl1-card-teepee.png) no-repeat; }
+.lvl1_card_type4 { background:url(../images/lvl1-card-tree.png) no-repeat; }
 #lvl1_card1 { top: 143px; left: 188px; }
 #lvl1_card2 { top: 143px; left: 353px; }
 #lvl1_card3 { top: 143px; left: 519px; }
@@ -488,7 +488,7 @@ body {
 /* -------------------------------- lvl2 page ----------------------------- */
 
 #lvl2_bg {
-    background:url(../img/lvl2-bg.png) no-repeat;
+    background:url(../images/lvl2-bg.png) no-repeat;
     width: 100%;
     height: 100%;
     z:1;
@@ -501,7 +501,7 @@ body {
     width: 1300px;
     height: 265px;
     display: block;
-    background:url(../img/lvl2-waves.png) no-repeat;
+    background:url(../images/lvl2-waves.png) no-repeat;
     -webkit-animation: rock_horiz 6s ease-in-out infinite;
 }
 
@@ -512,7 +512,7 @@ body {
     width: 166px;
     height: 155px;
     display: block;
-    background:url(../img/lvl2-tree.png) no-repeat;
+    background:url(../images/lvl2-tree.png) no-repeat;
     -webkit-animation: rock_rotate_left 6s ease-in-out infinite;
     -webkit-transform-origin: 50% 100%;
 }
@@ -524,7 +524,7 @@ body {
     width: 190px;
     height: 163px;
     display: block;
-    background:url(../img/lvl2-boat.png) no-repeat;
+    background:url(../images/lvl2-boat.png) no-repeat;
     -webkit-animation: rock_rotate_right 6s ease-in-out infinite;
     -webkit-transform-origin: 50% 100%;
 }
@@ -589,7 +589,7 @@ body {
     width: 61px;
     height: 28px;
     display: block;
-    background:url(../img/lvl2-fish-2.png) no-repeat;
+    background:url(../images/lvl2-fish-2.png) no-repeat;
     -webkit-animation: swim1 10s infinite;
 }
 
@@ -600,7 +600,7 @@ body {
     width: 30px;
     height: 22px;
     display: block;
-    background:url(../img/lvl2-fish-1.png) no-repeat;
+    background:url(../images/lvl2-fish-1.png) no-repeat;
     -webkit-animation: swim2 7s -4s infinite;
 }
 
@@ -611,7 +611,7 @@ body {
     width: 30px;
     height: 22px;
     display: block;
-    background:url(../img/lvl2-fish-1.png) no-repeat;
+    background:url(../images/lvl2-fish-1.png) no-repeat;
     -webkit-animation: swim3 8s -2s infinite;
 }
 
@@ -635,7 +635,7 @@ body {
     width: 6px;
     height: 9px;
     display: block;
-    background:url(../img/lvl2-drop-1.png) no-repeat;
+    background:url(../images/lvl2-drop-1.png) no-repeat;
     -webkit-animation: lvl2_droplet_left1 6s linear -1s infinite;
 }
 
@@ -659,7 +659,7 @@ body {
     width: 10px;
     height: 13px;
     display: block;
-    background:url(../img/lvl2-drop-2.png) no-repeat;
+    background:url(../images/lvl2-drop-2.png) no-repeat;
     -webkit-animation: lvl2_droplet_right 6s linear -3s infinite;
 }
 
@@ -683,7 +683,7 @@ body {
     width: 10px;
     height: 13px;
     display: block;
-    background:url(../img/lvl2-drop-3.png) no-repeat;
+    background:url(../images/lvl2-drop-3.png) no-repeat;
     -webkit-animation: lvl2_droplet_left2 6s linear -4s infinite;
 }
 
@@ -704,7 +704,7 @@ body {
     width: 57px;
     height: 34px;
     display: block;
-    background:url(../img/lvl2-cloud-2.png) no-repeat;
+    background:url(../images/lvl2-cloud-2.png) no-repeat;
     -webkit-animation: lvl2_cloud_float2 120s linear -16s infinite;
 }
 
@@ -715,7 +715,7 @@ body {
     width: 93px;
     height: 57px;
     display: block;
-    background:url(../img/lvl2-cloud-1.png) no-repeat;
+    background:url(../images/lvl2-cloud-1.png) no-repeat;
     -webkit-animation: lvl2_cloud_float1 50s linear -12s infinite;
 }
 
@@ -726,7 +726,7 @@ body {
     width: 93px;
     height: 57px;
     display: block;
-    background:url(../img/lvl2-cloud-1.png) no-repeat;
+    background:url(../images/lvl2-cloud-1.png) no-repeat;
     -webkit-animation: lvl2_cloud_float1 70s linear -50s infinite;
 }
 
@@ -737,7 +737,7 @@ body {
     width: 57px;
     height: 34px;
     display: block;
-    background:url(../img/lvl2-cloud-2.png) no-repeat;
+    background:url(../images/lvl2-cloud-2.png) no-repeat;
     -webkit-animation: lvl2_cloud_float2 100s linear -80s infinite;
 }
 
@@ -748,7 +748,7 @@ body {
     width: 57px;
     height: 34px;
     display: block;
-    background:url(../img/lvl2-cloud-2.png) no-repeat;
+    background:url(../images/lvl2-cloud-2.png) no-repeat;
     -webkit-animation: lvl2_cloud_float2 110s linear -80s infinite;
 }
 
@@ -759,23 +759,23 @@ body {
     width: 93px;
     height: 57px;
     display: block;
-    background:url(../img/lvl2-cloud-1.png) no-repeat;
+    background:url(../images/lvl2-cloud-1.png) no-repeat;
     -webkit-animation: lvl2_cloud_float1 60s linear -60s infinite;
 }
 
-#lvl2_quit { color: #59a7c4; background:url(../img/lvl2-quit-x.png) no-repeat; }
+#lvl2_quit { color: #59a7c4; background:url(../images/lvl2-quit-x.png) no-repeat; }
 #lvl2_matches { color: #ffffff; }
 #lvl2_hint { color: #ffffff; }
-#lvl2_hintrays:hover { background:url(../img/lvl2-hint-rays.png) no-repeat; }
+#lvl2_hintrays:hover { background:url(../images/lvl2-hint-rays.png) no-repeat; }
 
 .lvl2_card { width: 131px; height: 131px; }
-.lvl2_card_back { background:url(../img/lvl2-card-back.png) no-repeat; }
-.lvl2_card_type1 { background:url(../img/lvl2-card-fan.png) no-repeat; }
-.lvl2_card_type2 { background:url(../img/lvl2-card-lifevest.png) no-repeat; }
-.lvl2_card_type3 { background:url(../img/lvl2-card-lighthouse.png) no-repeat; }
-.lvl2_card_type4 { background:url(../img/lvl2-card-melon.png) no-repeat; }
-.lvl2_card_type5 { background:url(../img/lvl2-card-octopus.png) no-repeat; }
-.lvl2_card_type6 { background:url(../img/lvl2-card-whale.png) no-repeat; }
+.lvl2_card_back { background:url(../images/lvl2-card-back.png) no-repeat; }
+.lvl2_card_type1 { background:url(../images/lvl2-card-fan.png) no-repeat; }
+.lvl2_card_type2 { background:url(../images/lvl2-card-lifevest.png) no-repeat; }
+.lvl2_card_type3 { background:url(../images/lvl2-card-lighthouse.png) no-repeat; }
+.lvl2_card_type4 { background:url(../images/lvl2-card-melon.png) no-repeat; }
+.lvl2_card_type5 { background:url(../images/lvl2-card-octopus.png) no-repeat; }
+.lvl2_card_type6 { background:url(../images/lvl2-card-whale.png) no-repeat; }
 #lvl2_card1 { top: 44px; left: 318px; }
 #lvl2_card2 { top: 44px; left: 451px; }
 #lvl2_card3 { top: 44px; left: 585px; }
@@ -792,7 +792,7 @@ body {
 /* -------------------------------- lvl3 page ----------------------------- */
 
 #lvl3_bg {
-    background:url(../img/lvl3-bg.png) no-repeat;
+    background:url(../images/lvl3-bg.png) no-repeat;
     width: 100%;
     height: 100%;
     z:1;
@@ -818,7 +818,7 @@ body {
     width: 156px;
     height: 90px;
     display: block;
-    background:url(../img/lvl3-micro-light.png) no-repeat;
+    background:url(../images/lvl3-micro-light.png) no-repeat;
     -webkit-animation: lvl3_blink 2s cubic-bezier(1.0,0,0,1.0) 0s infinite;
 }
 
@@ -829,7 +829,7 @@ body {
     width: 24px;
     height: 9px;
     display: block;
-    background:url(../img/lvl3-micro-time.png) no-repeat;
+    background:url(../images/lvl3-micro-time.png) no-repeat;
     -webkit-animation: lvl3_blink 2s cubic-bezier(1.0,0,0,1.0) -1s infinite;
 }
 
@@ -848,7 +848,7 @@ body {
     width: 43px;
     height: 30px;
     display: block;
-    background:url(../img/lvl3-mouse.png) no-repeat;
+    background:url(../images/lvl3-mouse.png) no-repeat;
     -webkit-animation: lvl3_peek 14s linear 0s infinite;
 }
 
@@ -885,7 +885,7 @@ body {
     width: 6px;
     height: 9px;
     display: block;
-    background:url(../img/lvl3-drop-1.png) no-repeat;
+    background:url(../images/lvl3-drop-1.png) no-repeat;
     -webkit-animation: lvl3_droplet_left 2s linear -1.5s infinite;
 }
 
@@ -896,7 +896,7 @@ body {
     width: 6px;
     height: 9px;
     display: block;
-    background:url(../img/lvl3-drop-3.png) no-repeat;
+    background:url(../images/lvl3-drop-3.png) no-repeat;
     -webkit-animation: lvl3_droplet_right 2s linear 0s infinite;
 }
 
@@ -920,7 +920,7 @@ body {
     width: 10px;
     height: 146px;
     display: block;
-    background:url(../img/lvl3-blinds.png) no-repeat;
+    background:url(../images/lvl3-blinds.png) no-repeat;
     -webkit-animation: lvl3_pullcord 5s linear 0s infinite;
     -webkit-transform-origin: 50% 0%;
 }
@@ -937,7 +937,7 @@ body {
     width: 220px;
     height: 50px;
     display: block;
-    background:url(../img/lvl3-cloud.png) no-repeat;
+    background:url(../images/lvl3-cloud.png) no-repeat;
     -webkit-animation: lvl3_cloud_float 30s linear -10s infinite;
 }
 
@@ -948,25 +948,25 @@ body {
     width: 220px;
     height: 50px;
     display: block;
-    background:url(../img/lvl3-cloud.png) no-repeat;
+    background:url(../images/lvl3-cloud.png) no-repeat;
     -webkit-animation: lvl3_cloud_float 30s linear -25s infinite;
 }
 
-#lvl3_quit { color: #e0371b; background:url(../img/lvl3-quit-x.png) no-repeat; }
+#lvl3_quit { color: #e0371b; background:url(../images/lvl3-quit-x.png) no-repeat; }
 #lvl3_matches { color: #1b97ed; }
 #lvl3_hint { color: #1b97ed; }
-#lvl3_hintrays:hover { background:url(../img/lvl3-hint-rays.png) no-repeat; }
+#lvl3_hintrays:hover { background:url(../images/lvl3-hint-rays.png) no-repeat; }
 
 .lvl3_card { width: 131px; height: 131px; }
-.lvl3_card_back { background:url(../img/lvl3-card-back.png) no-repeat; }
-.lvl3_card_type1 { background:url(../img/lvl3-card-cupcake.png) no-repeat; }
-.lvl3_card_type2 { background:url(../img/lvl3-card-cup.png) no-repeat; }
-.lvl3_card_type3 { background:url(../img/lvl3-card-donut.png) no-repeat; }
-.lvl3_card_type4 { background:url(../img/lvl3-card-hotdog.png) no-repeat; }
-.lvl3_card_type5 { background:url(../img/lvl3-card-kettle.png) no-repeat; }
-.lvl3_card_type6 { background:url(../img/lvl3-card-measure.png) no-repeat; }
-.lvl3_card_type7 { background:url(../img/lvl3-card-pepper.png) no-repeat; }
-.lvl3_card_type8 { background:url(../img/lvl3-card-whisk.png) no-repeat; }
+.lvl3_card_back { background:url(../images/lvl3-card-back.png) no-repeat; }
+.lvl3_card_type1 { background:url(../images/lvl3-card-cupcake.png) no-repeat; }
+.lvl3_card_type2 { background:url(../images/lvl3-card-cup.png) no-repeat; }
+.lvl3_card_type3 { background:url(../images/lvl3-card-donut.png) no-repeat; }
+.lvl3_card_type4 { background:url(../images/lvl3-card-hotdog.png) no-repeat; }
+.lvl3_card_type5 { background:url(../images/lvl3-card-kettle.png) no-repeat; }
+.lvl3_card_type6 { background:url(../images/lvl3-card-measure.png) no-repeat; }
+.lvl3_card_type7 { background:url(../images/lvl3-card-pepper.png) no-repeat; }
+.lvl3_card_type8 { background:url(../images/lvl3-card-whisk.png) no-repeat; }
 #lvl3_card1 { top: 44px; left: 252px; }
 #lvl3_card2 { top: 44px; left: 384px; }
 #lvl3_card3 { top: 44px; left: 518px; }
