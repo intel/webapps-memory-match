@@ -9,6 +9,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-release');
   grunt.loadTasks('tools/grunt-tasks');
 
   grunt.initConfig({
@@ -16,6 +17,14 @@ module.exports = function (grunt) {
     chromeInfo: grunt.file.readJSON('data/chrome-crx/manifest.json'),
 
     clean: ['build'],
+
+    release: {
+      options: {
+        npm: false,
+        npmtag: false,
+        tagName: 'v<%= version %>'
+      }
+    },
 
     tizen_configuration: {
       // location on the device to install the tizen-app.sh script to
@@ -190,7 +199,7 @@ module.exports = function (grunt) {
             dest: 'build/sdk/lib/requirejs-domready/domReady.js'
           },
           { expand: true, cwd: 'data/tizen-wgt/', src: ['config.xml'], dest: 'build/sdk/' },
-          { expand: true, cwd: '.', src: ['icon.png'], dest: 'build/sdk/' },
+          { expand: true, cwd: '.', src: ['icon*.png'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['LICENSE'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['OFL.txt'], dest: 'build/sdk/' }
         ]
@@ -298,8 +307,7 @@ module.exports = function (grunt) {
         localPort: 9090,
         stopOnFailure: true
       }
-    },
-
+    }
   });
 
   grunt.registerTask('dist', [
