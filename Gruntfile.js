@@ -110,7 +110,7 @@ module.exports = function (grunt) {
         files: [
           { expand: true, cwd: '.', src: ['app/audio/**'], dest: 'build/' },
           { expand: true, cwd: '.', src: ['app/font/**'], dest: 'build/' },
-          { expand: true, cwd: '.', src: ['README.txt'], dest: 'build/app/' }
+          { expand: true, cwd: '.', src: ['app/README.txt'], dest: 'build/' }
         ]
       },
 
