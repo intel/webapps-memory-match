@@ -48,23 +48,37 @@ define(['game', 'appframework', 'scale', 'domReady!'], function (Game, $, scale)
     });
 
     /* game launch buttons */
-    $('#main_lvl1btn').click(function() {
-      $("#main_page").hide();
-      $("#lvl1_page").show();
-      Game.start_game(1);
-    });
+    $('#main_lvl1btn')
+      .on('click',function() {
+        $("#main_page").hide();
+        $("#lvl1_page").show();
+        Game.start_game(1);
+      })
+      .on('mousedown',function() {
+        this.className='main_btn_text main_lvl1btn_on';
+      });
 
-    $('#main_lvl2btn').click(function() {
-      $("#main_page").hide();
-      $("#lvl2_page").show();
-      Game.start_game(2);
-    });
+    $('#main_lvl2btn')
+      .on('click',function() {
+        $("#main_page").hide();
+        $("#lvl2_page").show();
+        Game.start_game(2);
+      })
+      .on('mousedown',function() {
+        this.className='main_btn_text main_lvl2btn_on';
+      })
+    ;
 
-    $('#main_lvl3btn').click(function() {
-      $("#main_page").hide();
-      $("#lvl3_page").show();
-      Game.start_game(3);
-    });
+    $('#main_lvl3btn')
+      .on('click',function() {
+        $("#main_page").hide();
+        $("#lvl3_page").show();
+        Game.start_game(3);
+      })
+      .on('mousedown',function() {
+        this.className='main_btn_text main_lvl3btn_on';
+      })
+    ;
 
     /* setup for game pages */
     $('.quit').click(Game.quit);
@@ -88,28 +102,42 @@ define(['game', 'appframework', 'scale', 'domReady!'], function (Game, $, scale)
     });
 
     // buttons on the popup shown when level is complete
-    $("#win_btn1").click(function() {
-      $("#win_dlg_page").hide();
-      $(".card").removeClass('flip');
-      window.setTimeout(function () {
-        Game.start_game(Game.win_level);
-      }, Game.fliptime);
-    });
+    $("#win_btn1")
+      .on('click',function() {
+        $("#win_dlg_page").hide();
+        $(".card").removeClass('flip');
+        window.setTimeout(function () {
+          Game.start_game(Game.win_level);
+        }, Game.fliptime);
+      })
+      .on('mousedown',function() {
+        this.className='win_btn1_on';
+      });
 
-    $("#win_btn2").click(function() {
-      var next_level = Game.win_level + 1;
-      if (next_level > 3) {
-        next_level = 1;
-      }
+    $("#win_btn2")
+      .on('click',function() {
+        var next_level = Game.win_level + 1;
+        if (next_level > 3) {
+          next_level = 1;
+        }
 
-      $("#win_dlg_page").hide();
-      $("#lvl" + Game.win_level + "_page").hide();
-      $("#lvl" + next_level + "_page").show();
+        $("#win_dlg_page").hide();
+        $("#lvl" + Game.win_level + "_page").hide();
+        $("#lvl" + next_level + "_page").show();
 
-      Game.start_game(next_level);
-    });
+        Game.start_game(next_level);
+      })
+      .on('mousedown',function() {
+        this.className='win_btn2_on';
+      });
 
-    $("#win_btn3").click(Game.quit);
+    $("#win_btn3")
+      .on('click',function() {
+        Game.quit
+      })
+      .on('mousedown',function() {
+        this.className='win_btn3_on';
+      });
 
     window.onblur = function() {
       Game.unfocus();
