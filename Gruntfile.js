@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     packageInfo: grunt.file.readJSON('package.json'),
-    chromeInfo: grunt.file.readJSON('data/chrome-crx/manifest.json'),
+    chromeInfo: grunt.file.readJSON('platforms/chrome-crx/manifest.json'),
 
     clean: ['build'],
 
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
 
       wgt_config: {
         files: [
-          { expand: true, cwd: 'data/tizen-wgt/', src: ['config.xml'], dest: 'build/wgt/' }
+          { expand: true, cwd: 'platforms/tizen-wgt/', src: ['config.xml'], dest: 'build/wgt/' }
         ],
         options:
         {
@@ -147,7 +147,7 @@ module.exports = function (grunt) {
       crx_manifest:
       {
         files: [
-          { expand: true, cwd: 'data/chrome-crx/', src: ['manifest.json'], dest: 'build/crx/' }
+          { expand: true, cwd: 'platforms/chrome-crx/', src: ['manifest.json'], dest: 'build/crx/' }
         ],
 
         options:
@@ -170,7 +170,7 @@ module.exports = function (grunt) {
       xpk_manifest:
       {
         files: [
-          { expand: true, cwd: 'data/tizen-xpk/', src: ['manifest.json'], dest: 'build/xpk/' }
+          { expand: true, cwd: 'platforms/tizen-xpk/', src: ['manifest.json'], dest: 'build/xpk/' }
         ],
 
         options:
@@ -201,7 +201,7 @@ module.exports = function (grunt) {
             src: 'app/lib/requirejs-domready/domReady.js',
             dest: 'build/sdk/lib/requirejs-domready/domReady.js'
           },
-          { expand: true, cwd: 'data/tizen-wgt/', src: ['config.xml'], dest: 'build/sdk/' },
+          { expand: true, cwd: 'platforms/tizen-wgt/', src: ['config.xml'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['icon*.png'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['LICENSE'], dest: 'build/sdk/' },
           { expand: true, cwd: '.', src: ['OFL.txt'], dest: 'build/sdk/' }
