@@ -5,19 +5,16 @@ Run the following in the top-level directory of the project:
 
     npm install
 
-grunt now requires that you install grunt-cli globally
+grunt requires that you install grunt-cli globally
 to be able to use grunt from the command line. To install
 grunt-cli do:
 
     npm install -g grunt-cli
 
-You also need bower to install the client-side dependencies:
+You should then install the client-side dependencies into app/lib/:
 
-    npm install -g bower
-
-Then install the client-side dependencies into app/lib:
-
-    bower install
+  npm install -g bower
+  bower install
 
 Note that if you want to install the application to a Tizen device
 as a wgt file, you will also need to install the sdb tool first.
@@ -73,20 +70,23 @@ There are a few options for running the application:
     then load the build/crx directory as an unpacked extension in Chrome
     developer mode. (The build can't currently make full .crx packages.)
 
-*   On Linux, use make to install the app to /usr/share/. If you are
-    using the Chromium browser, you can use the Makefile as is; if not, edit the
-    Makefile so the BROWSER= variable is set to the name of your Chrome
-    binary (e.g. google-chrome instead of chromium-browser).
-
-    Then do
-
-        sudo make install
-
-    to install the application. On Linux desktops which support the
-    freedesktop.org specs, this will add the application to the standard
-    application launcher.
-
 # PACKAGING
+
+To sign the app, grunt needs to know the location of your Tizen SDK
+Profile xml file. This is set to default to :
+
+  test:$HOME/tizen-sdk/tools/ide/sample/profiles.xml
+
+which is the default location according to the Tizen CLI SDK instructions
+for generating the certificates.
+
+<https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fcommand_line_interface.htm>
+
+You can override this path using the TIZENSDKPROFILE environment
+variable. For example, if you moved the sdk from ~/tizen-sdk to
+~/apps/tizen-sdk :
+
+  export TIZENSDKPROFILE=test:$HOME/apps/tizen-sdk/tools/ide/sample/profiles.xml
 
 The application can be packaged into a wgt (zip) file using the grunt
 command:
@@ -102,6 +102,27 @@ CSS, and HTML) using:
 
 Note that in both cases, the files comprising the packages are
 first copied into the build/wgt and build/sdk directories respectively.
+
+To create packages for Android use the 'apk' target:
+
+    grunt apk
+
+This will first build an 'xpk' target and then package two apks in
+build/ named AppName_{x86,arm}.apk.
+You can then install the appropriate one to your device as usual -
+for example, ```adb install -r build/AppName_x86.apk```.
+There are also targets to create packages just for a single architecture. They require the 'xpk' target to be build previously :
+
+    grunt xpk
+    grunt crosswalk:x86
+
+or :
+
+    grunt xpk
+    grunt crosswalk:arm
+
+Packaging for Android requires some set up - please see
+[crosswalk-apk-generator README.md](https://github.com/crosswalk-project/crosswalk-apk-generator/blob/master/README.md#pre-requisites).
 
 # REQUIRE AND ALMOND
 
