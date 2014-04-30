@@ -1,13 +1,10 @@
 {
   "app": {
     "launch": {
-      "container": "panel",
-	    "width":1024,
-	    "height":600,
       "local_path": "index.html"
     }
   },
-  "default_locale": "en",
+  "default_locale": "en_US",
   "description": "<%= packageInfo.description %>",
   "icons": {
     "128": "icon_128.png",
@@ -18,6 +15,5 @@
   "name": "<%= packageInfo.name %>",
   "permissions": [  ],
   "version": "<%= packageInfo.version %>",
-  "homepage_url" : "https://01.org/webapps/content/memory-match",
-  "update_url" : "https://01.org/webapps/content/memory-match/update.xml"
+  "homepage_url" : "https://01.org/webapps/content/memory-match"
 }
